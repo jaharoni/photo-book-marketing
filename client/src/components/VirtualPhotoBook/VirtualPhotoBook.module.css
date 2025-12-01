@@ -1,0 +1,208 @@
+/**
+ * VirtualPhotoBook Component Styles
+ * 
+ * This component creates a 3D interactive book viewer with:
+ * - Auto-animation: Pages turn automatically based on settings.autoplayIntervalMs
+ * - Inactivity detection: Resumes autoplay after settings.inactivityTimeoutMs
+ * - User interaction: Pauses autoplay on click, swipe, or keyboard input
+ * - Responsive design: Shows open book on desktop, single page on mobile
+ */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  user-select: none;
+}
+
+/* Desktop: Open book with two facing pages */
+.bookDesktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+  min-height: 500px;
+  gap: 20px;
+}
+
+.spread {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.spread:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.spreadImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.spread:hover .spreadImage {
+  transform: scale(1.05);
+}
+
+.spreadContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.spread:hover .spreadContent {
+  opacity: 1;
+}
+
+.spreadTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.spreadCaption {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.spreadCta {
+  display: inline-block;
+  padding: 8px 16px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.spreadCta:hover {
+  background: #f0f0f0;
+}
+
+/* Mobile: Single page view */
+.bookMobile {
+  display: none;
+}
+
+/* Navigation controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.navButton {
+  padding: 12px 24px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navButton:hover:not(:disabled) {
+  background: #34495e;
+  transform: translateY(-2px);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageIndicator {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Page turn animations */
+.spreadEnter {
+  opacity: 0;
+  transform: rotateY(-90deg) scale(0.8);
+}
+
+.spreadEnterActive {
+  opacity: 1;
+  transform: rotateY(0) scale(1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spreadExit {
+  opacity: 1;
+  transform: rotateY(0) scale(1);
+}
+
+.spreadExitActive {
+  opacity: 0;
+  transform: rotateY(90deg) scale(0.8);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .bookDesktop {
+    display: none;
+  }
+
+  .bookMobile {
+    display: block;
+  }
+
+  .spread {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .spread {
+    height: 400px;
+  }
+
+  .spreadTitle {
+    font-size: 1.25rem;
+  }
+
+  .spreadCaption {
+    font-size: 0.9rem;
+  }
+}
