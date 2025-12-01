@@ -1,0 +1,24 @@
+{
+  "bookTitle": "Journey Through Landscapes",
+  "subtitle": "A premium photo book capturing the world's most breathtaking moments",
+  "primaryCtaLabel": "Buy the Photo Book",
+  "primaryCtaLink": "#buy",
+  "secondaryCtaLabel": "View Full Gallery",
+  "secondaryCtaLink": "#gallery",
+  "detailsText": "This limited edition photo book features 120 pages of stunning imagery printed on museum-quality paper. Each copy is hand-bound and numbered, making it a truly unique collector's item.",
+  "bulletPoints": [
+    "Premium 120gsm museum-quality paper",
+    "Hand-bound with Italian leather cover",
+    "Limited edition of 500 numbered copies",
+    "12x16 inch landscape format",
+    "Includes exclusive artist commentary"
+  ],
+  "thumbnails": [
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop",
+    "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=200&h=200&fit=crop",
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=200&h=200&fit=crop",
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&h=200&fit=crop"
+  ],
+  "autoplayIntervalMs": 3000,
+  "inactivityTimeoutMs": 5000
+}

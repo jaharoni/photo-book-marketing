@@ -1,0 +1,66 @@
+[
+  {
+    "id": "spread-1",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&h=1000&fit=crop",
+    "title": "Chapter One",
+    "caption": "Where our journey begins. A collection of moments frozen in time, telling the story of adventure and discovery.",
+    "ctaLabel": "Learn More",
+    "ctaLink": "#details"
+  },
+  {
+    "id": "spread-2",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1000&fit=crop",
+    "title": "Mountain Memories",
+    "caption": "Breathtaking vistas captured at golden hour. Every photograph tells a story of perseverance and natural beauty.",
+    "ctaLabel": "View Gallery",
+    "ctaLink": "#gallery"
+  },
+  {
+    "id": "spread-3",
+    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=1000&fit=crop",
+    "title": "Coastal Dreams",
+    "caption": "Where land meets sea. Serene moments captured along the shoreline, showcasing nature's eternal dance.",
+    "ctaLabel": "Explore",
+    "ctaLink": "#details"
+  },
+  {
+    "id": "spread-4",
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1000&fit=crop&sat=-100",
+    "title": "Urban Stories",
+    "caption": "City life through a different lens. Architecture, people, and the pulse of metropolitan energy captured in stunning detail.",
+    "ctaLabel": "Read More",
+    "ctaLink": "#details"
+  },
+  {
+    "id": "spread-5",
+    "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=1000&fit=crop",
+    "title": "Forest Whispers",
+    "caption": "Deep in the woods where light filters through ancient trees. A meditation on solitude and natural wonder.",
+    "ctaLabel": "Discover",
+    "ctaLink": "#details"
+  },
+  {
+    "id": "spread-6",
+    "imageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&h=1000&fit=crop",
+    "title": "Desert Horizons",
+    "caption": "Endless expanses under vast skies. The stark beauty of arid landscapes captured in vibrant detail.",
+    "ctaLabel": "See More",
+    "ctaLink": "#gallery"
+  },
+  {
+    "id": "spread-7",
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=1000&fit=crop",
+    "title": "Alpine Adventures",
+    "caption": "High altitude magic. Snow-capped peaks and pristine wilderness preserved in stunning photography.",
+    "ctaLabel": "Learn More",
+    "ctaLink": "#details"
+  },
+  {
+    "id": "spread-8",
+    "imageUrl": "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=800&h=1000&fit=crop",
+    "title": "Journey's End",
+    "caption": "Reflections on the path traveled. A culmination of experiences, emotions, and unforgettable moments.",
+    "ctaLabel": "Buy Now",
+    "ctaLink": "#buy"
+  }
+]
