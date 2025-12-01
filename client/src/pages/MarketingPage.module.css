@@ -2,18 +2,44 @@
   min-height: 100vh;
 }
 
-.loading,
-.error {
+.errorContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-size: 1.25rem;
-  color: #666;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
 }
 
-.error {
-  color: #e74c3c;
+.errorContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.errorContainer p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.retryButton {
+  padding: 12px 32px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Hero Section */
@@ -22,6 +48,18 @@
   padding: 60px 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .heroContent {
@@ -35,6 +73,18 @@
 
 .heroText {
   padding: 20px;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .heroTitle {
@@ -93,6 +143,18 @@
 
 .heroBook {
   padding: 20px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Details Section */
@@ -136,6 +198,12 @@
   border-left: 4px solid #667eea;
   border-radius: 4px;
   color: #333;
+  transition: all 0.3s;
+}
+
+.bulletList li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnailStrip {
@@ -157,7 +225,8 @@
 }
 
 .thumbnail:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Lead Capture Section */
@@ -207,6 +276,7 @@
 
 .footerLinks a:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 .copyright {

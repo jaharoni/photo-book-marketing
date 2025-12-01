@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import VirtualPhotoBook from '../components/VirtualPhotoBook/VirtualPhotoBook';
 import LeadCaptureForm from '../components/LeadCaptureForm/LeadCaptureForm';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 import { Spread, BookSettings } from '../components/VirtualPhotoBook/types';
 import { adaptSpreadsData, adaptSettingsData } from '../components/VirtualPhotoBook/dataAdapter';
 import styles from './MarketingPage.module.css';
@@ -63,15 +64,28 @@ const MarketingPage = () => {
   }, []);
 
   if (loading) {
-    return <div className={styles.loading}>Loading...</div>;
+    return <LoadingSpinner fullScreen message="Loading photo book..." />;
   }
 
   if (error) {
-    return <div className={styles.error}>Error: {error}</div>;
+    return (
+      <div className={styles.errorContainer}>
+        <h2>Oops! Something went wrong</h2>
+        <p>{error}</p>
+        <button onClick={() => window.location.reload()} className={styles.retryButton}>
+          Try Again
+        </button>
+      </div>
+    );
   }
 
   if (!settings || !pageData) {
-    return <div className={styles.error}>No data available</div>;
+    return (
+      <div className={styles.errorContainer}>
+        <h2>No content available</h2>
+        <p>Please contact support if this problem persists.</p>
+      </div>
+    );
   }
 
   return (
@@ -119,6 +133,7 @@ const MarketingPage = () => {
                   src={url}
                   alt={`Preview ${index + 1}`}
                   className={styles.thumbnail}
+                  loading="lazy"
                 />
               ))}
             </div>
